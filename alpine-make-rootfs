@@ -405,6 +405,7 @@ if grep -qw "$RESOLVCONF_MARK" "$rootfs"/etc/resolv.conf 2>/dev/null; then
 	rm "$rootfs"/etc/resolv.conf
 fi
 rm -Rf "$rootfs"/var/cache/apk
+mkdir "$rootfs"/var/cache/apk
 rm -Rf "$rootfs"/dev/*
 
 [ -f "$rootfs"/sbin/apk ] \
